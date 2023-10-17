@@ -1,0 +1,24 @@
+{
+  "name": "mdx-example",
+  "version": "0.0.0",
+  "description": "MDX content example project",
+  "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks",
+    "lint-staged": "lint-staged",
+    "format": "prettier \"content/**/*.{md,mdx}\" --write"
+  },
+  "author": {
+    "name": "@cieloazul310",
+    "url": "https://cieloazul310.github.io"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "lint-staged": "^15.0.1",
+    "prettier": "^3.0.3"
+  },
+  "lint-staged": {
+    "content/**/*.{md,mdx}": [
+      "prettier --write"
+    ]
+  }
+}
