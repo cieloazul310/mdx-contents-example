@@ -1,0 +1,23 @@
+name: Dispatch
+on:
+  push:
+    branches: [main]
+    paths: 
+      - content/**/*
+
+  workflow_dispatch:
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: ['cieloazul310/astro-with-private-mdx-contents']
+
+    steps:
+      - name: dispatch update-contents
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: ${{ matrix.repo }}
+          event-type: update-contents
