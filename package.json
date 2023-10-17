@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "MDX content example project",
   "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks",
     "lint-staged": "lint-staged",
     "format": "prettier \"content/**/*.{md,mdx}\" --write"
   },
