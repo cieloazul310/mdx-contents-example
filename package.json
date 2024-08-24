@@ -20,7 +20,7 @@
     "prettier": "^3.0.3"
   },
   "lint-staged": {
-    "content/**/*.{md,mdx}": [
+    "src/**/*.{md,mdx}": [
       "eslint",
       "prettier --write"
     ]
