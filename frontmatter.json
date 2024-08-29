@@ -1,0 +1,64 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true,
+          "required": true
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "choice",
+          "choices": ["cieloazul310", "那珂川緑波", "ショスタコおもち"],
+          "required": true
+        },
+        {
+          "title": "Content preview",
+          "name": "featuredImg",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Category",
+          "name": "category",
+          "type": "choice",
+          "choices": ["column", "culture", "sports"]
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Post",
+      "path": "[[workspace]]/src/post"
+    }
+  ],
+  "frontMatter.content.snippets": {
+    "YouTube": {
+      "description": "YouTubeの埋め込みコード",
+      "body": "<YouTube src=\"\" />",
+      "fields": []
+    }
+  }
+}
