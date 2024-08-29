@@ -9,23 +9,27 @@
         {
           "title": "Title",
           "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
+          "type": "string",
+          "required": true
         },
         {
           "title": "Publishing date",
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
-          "isPublishDate": true
+          "isPublishDate": true,
+          "required": true
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "choice",
+          "choices": ["cieloazul310", "那珂川緑波", "ショスタコおもち"],
+          "required": true
         },
         {
           "title": "Content preview",
-          "name": "preview",
+          "name": "featuredImg",
           "type": "image"
         },
         {
@@ -34,14 +38,10 @@
           "type": "draft"
         },
         {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
+          "title": "Category",
+          "name": "category",
+          "type": "choice",
+          "choices": ["column", "culture", "sports"]
         }
       ]
     }
@@ -51,19 +51,14 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "Post",
-      "path": "[[workspace]]/src/post/2020"
-    },
-    {
-      "title": "Post",
-      "path": "[[workspace]]/src/post/2021"
-    },
-    {
-      "title": "Post",
-      "path": "[[workspace]]/src/post/2022"
-    },
-    {
-      "title": "Post",
-      "path": "[[workspace]]/src/post/2023"
+      "path": "[[workspace]]/src/post"
     }
-  ]
+  ],
+  "frontMatter.content.snippets": {
+    "YouTube": {
+      "description": "YouTubeの埋め込みコード",
+      "body": "<YouTube src=\"\" />",
+      "fields": []
+    }
+  }
 }
