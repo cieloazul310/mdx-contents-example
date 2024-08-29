@@ -4,7 +4,7 @@
   "description": "MDX content example project",
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
-    "eslint": "eslint content --ext md,mdx",
+    "eslint": "eslint src",
     "lint-staged": "lint-staged",
     "format": "prettier \"content/**/*.{md,mdx}\" --write"
   },
@@ -14,15 +14,16 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.51.0",
-    "eslint-plugin-mdx": "^2.2.0",
-    "lint-staged": "^15.0.1",
-    "prettier": "^3.0.3"
+    "eslint": "^9.9.0",
+    "eslint-plugin-mdx": "^3.1.5",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3"
   },
   "lint-staged": {
-    "content/**/*.{md,mdx}": [
+    "src/**/*.{md,mdx}": [
       "eslint",
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
 }
