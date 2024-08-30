@@ -2,5 +2,10 @@
   "eslint.options": {
     "extensions": [".md", ".mdx"]
   },
-  "eslint.validate": ["markdown", "mdx"]
+  "eslint.validate": [
+    "markdown",
+    "mdx"
+  ],
+  "[markdown]": {
+  }
 }

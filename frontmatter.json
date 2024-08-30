@@ -1,5 +1,15 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "author",
+      "options": ["cieloazul310", "那珂川緑波", "ショスタコおもち"]
+    },
+    {
+      "id": "category",
+      "options": ["column", "culture", "sports"]
+    }
+  ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
@@ -21,33 +31,39 @@
           "required": true
         },
         {
-          "title": "Author",
-          "name": "author",
-          "type": "choice",
-          "choices": ["cieloazul310", "那珂川緑波", "ショスタコおもち"],
-          "required": true
-        },
-        {
-          "title": "Content preview",
-          "name": "featuredImg",
-          "type": "image"
-        },
-        {
           "title": "Is in draft",
           "name": "draft",
           "type": "draft"
         },
         {
+          "title": "Featured Image",
+          "name": "featuredImg",
+          "type": "image"
+        },
+        {
+          "title": "Featured Image Alt",
+          "name": "featuredImgAlt",
+          "type": "string"
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "taxonomy",
+          "taxonomyId": "author",
+          "required": true
+        },
+        {
           "title": "Category",
           "name": "category",
-          "type": "choice",
-          "choices": ["column", "culture", "sports"]
+          "type": "taxonomy",
+          "taxonomyId": "category"
         }
       ]
     }
   ],
   "frontMatter.framework.id": "astro",
   "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.defaultFileType": "mdx",
   "frontMatter.content.pageFolders": [
     {
       "title": "Post",
@@ -57,8 +73,13 @@
   "frontMatter.content.snippets": {
     "YouTube": {
       "description": "YouTubeの埋め込みコード",
-      "body": "<YouTube src=\"\" />",
-      "fields": []
+      "body": "<YouTube src=\"[[src]]\" />",
+      "fields": [{
+        "name": "src",
+        "title": "Video ID",
+        "type": "string",
+        "default": "9Ykf2IUA55E"
+      }]
     }
   }
 }

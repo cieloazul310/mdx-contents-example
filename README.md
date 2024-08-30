@@ -1,6 +1,12 @@
 # MDX example contents
 
-> As contents management system
+> As contents management system with [Front Matter] (Headless CMS)
+
+## Features
+
+- ESLint for MDX
+- Prettier
+- Schema validation with Front Matter (Work in progress)
 
 ## How it works?
 
@@ -29,3 +35,5 @@ Demo
 
 Repository  
 <https://github.com/cieloazul310/astro-with-private-mdx-contents>
+
+[Front Matter]: https://frontmatter.codes/ "Front Matter"
