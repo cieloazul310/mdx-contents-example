@@ -3,11 +3,19 @@
   "frontMatter.taxonomy.customTaxonomy": [
     {
       "id": "author",
-      "options": ["cieloazul310", "那珂川緑波", "ショスタコおもち"]
+      "options": [
+        "cieloazul310",
+        "那珂川緑波",
+        "ショスタコおもち"
+      ]
     },
     {
       "id": "category",
-      "options": ["column", "culture", "sports"]
+      "options": [
+        "column",
+        "culture",
+        "sports"
+      ]
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
@@ -50,13 +58,15 @@
           "name": "author",
           "type": "taxonomy",
           "taxonomyId": "author",
+          "singleValueAsString": true,
           "required": true
         },
         {
           "title": "Category",
           "name": "category",
           "type": "taxonomy",
-          "taxonomyId": "category"
+          "taxonomyId": "category",
+          "singleValueAsString": true
         }
       ]
     }
@@ -67,19 +77,25 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "Post",
-      "path": "[[workspace]]/src/post"
+      "path": "[[workspace]]/src/content/post"
     }
   ],
   "frontMatter.content.snippets": {
     "YouTube": {
       "description": "YouTubeの埋め込みコード",
       "body": "<YouTube src=\"[[src]]\" />",
-      "fields": [{
-        "name": "src",
-        "title": "Video ID",
-        "type": "string",
-        "default": "9Ykf2IUA55E"
-      }]
+      "fields": [
+        {
+          "name": "src",
+          "title": "Video ID",
+          "type": "string",
+          "default": "9Ykf2IUA55E"
+        }
+      ]
     }
+  },
+  "frontMatter.content.publicFolder": {
+    "path": "src/assets",
+    "relative": true
   }
 }
